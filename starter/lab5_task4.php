@@ -23,11 +23,11 @@ $max_safe_load   = 18.0; // tonnes — safety threshold
 
 // ── STEP 1: Basic statistics ─────────────────────────────────
 // Compute WITHOUT using array_sum(), max(), min() PHP functions
-// Use loops only:
 //   $mean   — average of all readings (2 decimal places)
 //   $max    — highest reading + which sensor
 //   $min    — lowest reading + which sensor
 //   $total  — sum of all readings
+
 
 // TODO: Step 1 — your code here
 $mean = 0;
