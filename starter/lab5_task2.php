@@ -3,11 +3,11 @@
  * ICS 2371 — Lab 5: Arrays and Array Operations
  * Task 2: Built-in Array Functions [6 marks]
  *
- * @author     [Your Full Name]
- * @student    [Your Reg Number, e.g. SCT212-XXXX/2024]
+ * @author     Johnray Mwendwa
+ * @student    ENE212-0070/2022
  * @lab        Lab 5 of 14
  * @unit       ICS 2371
- * @date       [Date completed]
+ * @date       24/4/2026
  */
 
 // Working dataset — use this array for ALL exercises below
@@ -21,6 +21,9 @@ $scores = [72, 45, 88, 91, 63, 77, 55, 88, 49, 95, 63, 70];
 // Compute and print average (to 2 decimal places)
 
 // TODO: Exercise A — your code here
+// echo "Total number of scores: " . count($scores) . "\n";
+// echo "Total marks: " . array_sum($scores) . "\n";
+// echo "Average marks: " . number_format(array_sum($scores) / count($scores), 2) . "\n";
 
 
 // ══════════════════════════════════════════════════════════════
@@ -33,6 +36,19 @@ $scores = [72, 45, 88, 91, 63, 77, 55, 88, 49, 95, 63, 70];
 // Note: explain in a comment why sort() modifies the original array
 
 // TODO: Exercise B — your code here
+// sort($scores);
+// echo "Scores sorted ascending: ";
+// print_r($scores);   
+// rsort($scores);
+// echo "Scores sorted descending: ";
+// print_r($scores);
+// sort($scores);
+// echo "Scores sorted ascending again: ";
+// $descending = array_reverse($scores);
+// echo "Scores sorted descending using array_reverse: ";
+// print_r($descending);
+
+// sort() modifies the original array because it sorts the elements in place, meaning it does not create a new array.
 
 
 // ══════════════════════════════════════════════════════════════
@@ -45,6 +61,20 @@ $scores = [72, 45, 88, 91, 63, 77, 55, 88, 49, 95, 63, 70];
 //    show how to handle the false return value safely
 
 // TODO: Exercise C — your code here
+// echo "Does 88 exist? " . (in_array(88, $scores) ? "true" : "false") . "\n";
+// echo "Does 100 exist? " . (in_array(100, $scores) ? "true" : "false") . "\n";
+// $index = array_search(91, $scores);
+// if ($index !== false) {
+//     echo "Index of 91: " . $index . "\n";
+// } else {
+//     echo "91 not found in scores.\n";
+// }
+// $index = array_search(100, $scores);
+// if ($index !== false) {
+//     echo "Index of 100: " . $index . "\n";
+// } else {
+//     echo "100 not found in scores.\n";
+// }
 
 
 // ══════════════════════════════════════════════════════════════
@@ -58,3 +88,17 @@ $scores = [72, 45, 88, 91, 63, 77, 55, 88, 49, 95, 63, 70];
 // 4. array_reverse() — print reversed array
 
 // TODO: Exercise D — your code here
+$scores = [72, 45, 88, 91, 63, 77, 55, 88, 49, 95, 63, 70];
+$unique_scores = array_unique($scores);
+echo "Unique scores: ";
+print_r($unique_scores);
+// array_slice($scores, 2, 5) means we start slicing from index 2 and take 5 elements from that point.
+$slice = array_slice($scores, 2, 5);
+echo "Slice of scores from index 2, length 5: ";
+print_r($slice);
+$comma_separated = implode(", ", $scores);
+echo "Scores as comma-separated string: " . $comma_separated . "\n";
+$reversed = array_reverse($scores);
+echo "Reversed scores: ";
+print_r($reversed);
+
